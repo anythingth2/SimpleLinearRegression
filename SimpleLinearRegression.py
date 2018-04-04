@@ -35,15 +35,55 @@ rgs.fit(x,y)
 y_pred = rgs.predict(x)
 
 
-# In[70]:
+# In[98]:
 
 
-fig = plt.figure()
+mean = y.mean()
+print('Mean =',mean.value)
+
+median = y.median()
+print('Median =',median.value)
+
+mode = y.mode()
+print('Mode at',mode.values[0][0])
+
+standardDeviation = y.std()
+print('Standard Deviation =',standardDeviation.value)
+
+
+# In[118]:
+
+
+y.plot()
+
+
+# In[114]:
+
+
+y.plot.hist()
+
+
+# In[115]:
+
+
+y.plot.box()
+
+
+# In[117]:
+
+
+
+
+
+# In[123]:
+
+
+
 ax = fig.add_subplot(111)
 ax.set_xlabel('time')
 ax.set_ylabel('number of users')
-plt.scatter(x,y,color='red')
-plt.scatter(x,y_pred,color='blue')
+plt.scatter(x,y,color='lightblue')
+plt.plot(x,y_pred,color='red')
 
 
 # In[71]:
